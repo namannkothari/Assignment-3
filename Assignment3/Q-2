@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int opr(int no1,int no2,int ch)
+{
+	if(ch == 1)
+	{
+		return no1+no2;
+	}
+	if(ch == 2)
+	{
+		return no1-no2;
+	}
+	if(ch == 3)
+	{
+		return no1*no2;
+	}
+	if(ch == 4)
+	{
+		return no1/no2;
+	}
+}
+int main()
+{
+	int no1,no2,ch,ans;
+	printf("enter the value of no1: ");
+	scanf("%d",&no1);
+	printf("enter the value of no2: ");
+	scanf("%d",&no2);
+	printf("1.add 2.sub 3.multiplication 4.divide \nenter you choice:- ");
+	scanf("%d",&ch);
+	if(ch > 4)
+	{
+		printf("invalid input");
+		return 0;
+	}
+	ans = opr(no1,no2,ch);
+	printf("ans is:- %d",ans);
+	
+}

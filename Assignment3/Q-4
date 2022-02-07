@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+ char trim(char *str){
+     
+ 
+ for(int i=0;str[i] != '\0';i++)
+    {
+        if(str[i] >= 58 && str[i] <= 64 || str[i] >= 91 && str[i] <= 96 || str[i] >= 32 && str[i] <= 38)
+            continue;
+        else
+             printf("%c",str[i]);
+    }
+    }
+int main()
+{
+    char str[50];
+    printf("Enter the String: ");
+    scanf("%s",&str);
+    
+   trim(str);
+}
